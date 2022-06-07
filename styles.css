@@ -1,0 +1,30 @@
+.bar-tenders{
+    display: flex;
+    flex-direction: column;
+
+    padding: 5%;
+}
+.wrapper{
+    width: 90%;
+    height: auto;
+    color: white;
+}
+.bartender{
+    padding:2%;
+}
+
+.bar-tenders > input{
+    margin: 1%;
+}
+
+.number-of-employees{
+    /* padding: 2%; */
+    margin: 5%;
+}
+
+#enter{
+    height: 5em;
+    width: 20em;
+    margin: 5%;
+    
+}
