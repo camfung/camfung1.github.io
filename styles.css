@@ -1,20 +1,31 @@
+*{
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
 .bar-tenders{
     display: flex;
     flex-direction: column;
-
+    padding: 5%;
+}
+#total-cash{
+    display: flex;
+    flex-direction: row;
     padding: 5%;
 }
 .wrapper{
     width: 90%;
     height: auto;
     color: white;
+    background-color: black;
 }
 .bartender{
     padding:2%;
 }
 
-.bar-tenders > input{
-    margin: 1%;
+input{
+    background-color: rgb(115, 127, 145);
+    color: black;
 }
 
 .number-of-employees{
@@ -27,4 +38,35 @@
     width: 20em;
     margin: 5%;
     
+}
+
+.welcomer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.cell{
+    flex-shrink: 1;
+}
+
+.sm{
+
+}
+
+.bg{
+    font-size: 4em;
+}
+
+.bgg{
+    font-size: 10em;
+    padding-bottom: 100%;
+    padding-top: 100%;
+}
+
+#bar-cashout{
+    font-size: 4em;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
