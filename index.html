@@ -11,12 +11,36 @@
 <body>
 
     <div id="wrapper">
+        <div class="welcomer">
+            <div class="cell">
+                <p class="bgg">hi.</p>
+                <p class="sm">This is Version 1 of the bar cashout. Here are the steps...</p>
+                <p class='sm'> </p>    
+            </div>
+            <div class="cell"><p class="sm"></p></div>
+            <div class="cell">
+                <p class="bg">1st.</p>
+                <p class="sm">Enter the number of bartenders</p>
+            </div>
+            <div class="cell">
+                <p class="bg">2nd.</p>
+                <p class="sm">Fill out the information that each of the boxes asks for.</p>
+            </div>
+            <div class="cell">
+                <p class="bg">3rd.</p>
+                <p class="sm">enter the total tips in cash that was made in the night.</p>
+            </div>
+        </div>
         
-        <header><h1>Bar Cashout</h1></header>
+        <div class="cell">
+            <p id="bar-cashout">Bar Cashout</p>
+            
+            
+        </div>
 
         <div class="number-of-employees">
-
-            <label for="num-people">Number of bartenders: </label>
+            <p class="sm">* is required</p>
+            <label for="num-people">*Number of bartenders: </label>
             <input type="number" min="1" max="5" id="numTenders">
         </div>
         <div id="bar-tenders">
@@ -24,17 +48,30 @@
                 <label for="">Name:</label>
                 <input type="text" name="name">
                 
-                <label for="start">Start time:</label>
+                <label for="start">*Start time:</label>
                 <input type="time">
 
-                <label for="end">End time:</label>
+                <label for="end">*End time:</label>
                 <input type="time">
 
-                <label for="food">Food:</label>
-                <input type="number">
+                <label for="food" >Food:</label>
+                <input type="number" value="0">
             </div>
             <div class="bar-tenders">
                 <label for="">Name:</label>
+                <input type="text" name="name">
+                
+                <label for="start">*Start time:</label>
+                <input type="time">
+
+                <label for="end">*End time:</label>
+                <input type="time">
+
+                <label for="food">Food:</label>
+                <input type="number" value="0">
+            </div>
+            <div class="bar-tenders">
+                <label for="">*Name:</label>
                 <input type="text" name="name">
                 
                 <label for="start">Start time:</label>
@@ -44,55 +81,42 @@
                 <input type="time">
 
                 <label for="food">Food:</label>
-                <input type="number">
+                <input type="number" value="0">
             </div>
             <div class="bar-tenders">
                 <label for="">Name:</label>
                 <input type="text" name="name">
                 
-                <label for="start">Start time:</label>
-                <input type="time">
-
-                <label for="end">End time:</label>
-                <input type="time">
-
-                <label for="food">Food:</label>
-                <input type="number">
-            </div>
-            <div class="bar-tenders">
-                <label for="">Name:</label>
-                <input type="text" name="name">
-                
-                <label for="start">Start time:</label>
+                <label for="start">*Start time:</label>
                 <input type="time" >
 
-                <label for="end">End time:</label>
+                <label for="end">*End time:</label>
                 <input type="time">
 
                 <label for="food">Food:</label>
-                <input type="number">
+                <input type="number" value="0">
             </div>
             <div class="bar-tenders">
                 <label for="">Name:</label>
                 <input type="text" name="name">
                 
-                <label for="start">Start time:</label>
+                <label for="start">*Start time:</label>
                 <input type="time">
 
-                <label for="end">End time:</label>
+                <label for="end">*End time:</label>
                 <input type="time">
 
                 <label for="food">Food:</label>
-                <input type="number">
+                <input type="number" value="0">
             </div>
-            
-        </div>
-        <div class="total-cash">
+            <div id="total-cash">
 
-            <label for="t-cash">Total cash:</label>
-            <input type="number" name="t-cash" id="">
-
+                <label for="t-cash">Total cash:</label>
+                <input type="number" name="t-cash" id="">
+    
+            </div>
         </div>
+
         
         <input type="button" onclick="main()" value="enter" id="enter">
         <div id="general">
