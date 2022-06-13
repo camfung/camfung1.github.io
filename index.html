@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script2.js" defer></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="icon" href="images/favicon.ico">
+    <title>Cash Out</title>
 </head>
 <body>
 
@@ -41,34 +42,34 @@
         <div class="number-of-employees">
             <p class="sm">* is required</p>
             <label for="num-people">*Number of bartenders: </label>
-            <input type="number" min="1" max="5" id="numTenders">
+            <input type="number" min="1" max="5" id="numTenders" value="2">
         </div>
         <div id="bar-tenders">
             <div class="bar-tenders">
                 <label for="">Name:</label>
-                <input type="text" name="name">
+                <input type="text" name="name" value="cameron">
                 
                 <label for="start">*Start time:</label>
-                <input type="time">
+                <input type="time" value="17:00">
 
                 <label for="end">*End time:</label>
-                <input type="time">
+                <input type="time" value="21:00">
 
                 <label for="food" >Food:</label>
                 <input type="number" value="0">
             </div>
             <div class="bar-tenders">
                 <label for="">Name:</label>
-                <input type="text" name="name">
+                <input type="text" name="name" value="sage">
                 
                 <label for="start">*Start time:</label>
-                <input type="time">
+                <input type="time" value="18:00">
 
                 <label for="end">*End time:</label>
-                <input type="time">
+                <input type="time" value="00:00">
 
                 <label for="food">Food:</label>
-                <input type="number" value="0">
+                <input type="number" value="10">
             </div>
             <div class="bar-tenders">
                 <label for="">*Name:</label>
@@ -112,17 +113,15 @@
             <div id="total-cash">
 
                 <label for="t-cash">Total cash:</label>
-                <input type="number" name="t-cash" id="">
+                <input type="number" name="t-cash" id="" value="100">
     
             </div>
         </div>
 
         
         <input type="button" onclick="main()" value="enter" id="enter">
-        <div id="general">
-            <p></p>
-            <p></p>
-            <p></p>
+        <div id="this">
+            <div id="results"></div>
         </div>
     </div>
 
