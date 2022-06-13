@@ -1,3 +1,4 @@
+
 class Bartender{
 
     constructor(_name, _start, _end, _food){
@@ -50,13 +51,7 @@ const getBartenders = (numTenders, inputs) =>{
 }
 totalTenders = 5
 
-let first = true;
-
 const main = () => {
-    if (!first)
-    {
-
-    }
     let inputs = document.querySelectorAll("input")
     let numTenders = parseInt(inputs[0].value);
     let totalCash = parseFloat(inputs[totalTenders * 4 + 1].value);
@@ -89,60 +84,75 @@ const main = () => {
     let dollarsPerHour = totalCash / totalHours;
     displayResults(bartenders, dollarsPerHour, totalCash, totalHours);
 }
-
+let first = true
 const displayResults = (bartenders, dollarsPerHour, totalCash, totalHours) =>{
-    let general = document.getElementById("general");
-
-    let tot = document.createElement("p")
-    tot.innerText = `Total Cash: $${totalCash}`;
-    general.appendChild(tot)
-
-    let toth = document.createElement("p")
-    toth.innerText =   `Total hours: ${totalHours.toFixed(2)}`;
-    general.appendChild(toth)
-
-    let dph = document.createElement("p")
-    dph.innerText = `Dollars per hour: ${dollarsPerHour.toFixed(2)}`;
-    general.appendChild(dph)
     
-
-    for (let ele of bartenders)
+    if (!first)
     {
-        ele.tipBeforeFood = (ele.hours * dollarsPerHour).toFixed(2); 
-        ele.finalTip = (ele.tipBeforeFood - ele.food).toFixed(2);
-        
-        let results = document.createElement("div");
-        let der = document.createElement("div")
-        der.className = "bartender"
-
-        let name = document.createElement("p")
-        let nameN = document.createTextNode(`name: ${ele.name}`)
-        name.appendChild(nameN)
-        der.appendChild(name)
-
-        let hours = document.createElement("p")
-        let hoursN = document.createTextNode(`hours: ${ele.hours}h`)
-        hours.appendChild(hoursN)
-        der.appendChild(hours)
-
-        let food = document.createElement("p")
-        let foodN = document.createTextNode(`food: $${ele.food}`)
-        food.appendChild(foodN)
-        der.appendChild(food)
-
-        let tipBeforeFood = document.createElement("p")
-        let tipBeforeFoodN = document.createTextNode(`tip before food: $${ele.tipBeforeFood}`)
-        tipBeforeFood.appendChild(tipBeforeFoodN)
-        der.appendChild(tipBeforeFood)
-
-        let finaltip = document.createElement("p")
-        let finaltipN = document.createTextNode(`final tip: $${ele.finalTip}`)
-        finaltip.appendChild(finaltipN)
-        der.appendChild(finaltip)
-
-        results.appendChild(der)
-
-        let wrapper = document.getElementById("wrapper")
-        wrapper.appendChild(results)
+        let results = document.getElementById("results")
+        results.remove()
+        let th = document.getElementById("this")
+        let res = document.createElement("div")
+        res.id="results"
+        th.appendChild(res)
     }
+    let tot = document.createElement("div")
+    tot.className = "head"
+    t3 = document.createTextNode(`Total Cash: $${totalCash.toFixed(2)}`);
+    tot.appendChild(t3)
+    results.append(tot)
+
+    let dph = document.createElement("div")
+    dph.className = "head"
+    let t2 = document.createTextNode(`Dollars per hour: ${dollarsPerHour.toFixed(2)}`);
+    dph.appendChild(t2)
+    results.append(dph)
+    
+    let toth = document.createElement("div")
+    toth.className = "head"
+    let t1 = document.createTextNode(`Total hours: ${totalHours.toFixed(2)}`);
+    toth.appendChild(t1)
+    results.append(toth)
+
+    first = false;
+    for (let ele of bartenders)
+{
+    ele.tipBeforeFood = (ele.hours * dollarsPerHour).toFixed(2); 
+    ele.finalTip = (ele.tipBeforeFood - ele.food).toFixed(2);
+    
+    let der = document.createElement("div")
+    der.className = "bartender"
+
+    let name = document.createElement("p")
+    let nameN = document.createTextNode(`name: ${ele.name}`)
+    name.appendChild(nameN)
+    der.appendChild(name)
+
+    let hours = document.createElement("p")
+    let hoursN = document.createTextNode(`hours: ${ele.hours}h`)
+    hours.appendChild(hoursN)
+    der.appendChild(hours)
+
+    let food = document.createElement("p")
+    let foodN = document.createTextNode(`food: $${ele.food}`)
+    food.appendChild(foodN)
+    der.appendChild(food)
+
+    let tipBeforeFood = document.createElement("p")
+    let tipBeforeFoodN = document.createTextNode(`tip before food: $${ele.tipBeforeFood}`)
+    tipBeforeFood.appendChild(tipBeforeFoodN)
+    der.appendChild(tipBeforeFood)
+
+    let finaltip = document.createElement("p")
+    let finaltipN = document.createTextNode(`final tip: $${ele.finalTip}`)
+    finaltip.appendChild(finaltipN)
+    der.appendChild(finaltip)
+
+    results.appendChild(der)
 }
+}
+
+
+
+
+
