@@ -81,6 +81,11 @@ const main = () => {
         totalHours += bar.hours;
 
     }
+        }
+    for (tender of bartenders)
+    {
+        totalCash += tender.food
+    } 
     let dollarsPerHour = totalCash / totalHours;
     displayResults(bartenders, dollarsPerHour, totalCash, totalHours);
 }
