@@ -81,7 +81,7 @@ const main = () => {
         totalHours += bar.hours;
 
     }
-        }
+        
     for (tender of bartenders)
     {
         totalCash += tender.food
